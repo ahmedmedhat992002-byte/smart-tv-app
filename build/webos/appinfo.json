@@ -1,0 +1,18 @@
+{
+  "id": "com.antigravity.iptv.player",
+  "version": "1.0.0",
+  "vendor": "Antigravity",
+  "type": "web",
+  "main": "index.html",
+  "title": "IPTV Premium Player",
+  "icon": "icon.png",
+  "largeIcon": "icon.png",
+  "bgImage": "icon.png",
+  "resolution": "1920x1080",
+  "transparent": false,
+  "requiredVersion": "4.0.0",
+  "handlesRelaunch": true,
+  "accessibility": {
+    "supportsAudioGuidance": false
+  }
+}

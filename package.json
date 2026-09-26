@@ -1,0 +1,68 @@
+{
+  "name": "smart-tv-iptv-player",
+  "version": "1.0.0",
+  "description": "Production-Ready IPTV Player for Samsung Smart TV, LG webOS, Windows and Android",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:dev": "electron .",
+    "package:exe": "npm run build && electron-builder --win",
+    "package:tizen": "node scripts/package-tizen.js",
+    "package:webos": "node scripts/package-webos.js",
+    "package:all": "npm run build && npm run package:tizen && npm run package:webos && npm run package:exe"
+  },
+  "build": {
+    "appId": "com.antigravity.iptvplayer",
+    "productName": "IPTV Premium Player",
+    "directories": {
+      "output": "D:/IPTV_Player_Windows_EXE"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "public/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "IPTV Premium Player"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "public/icon.png"
+    ]
+  },
+  "keywords": [
+    "iptv",
+    "tizen",
+    "webos",
+    "windows",
+    "android",
+    "smart-tv",
+    "hls",
+    "m3u"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "^8.5.2",
+    "hls.js": "^1.7.3"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/cli": "^8.5.2",
+    "@types/node": "^26.6.3",
+    "electron": "^44.4.5",
+    "electron-builder": "^26.15.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  }
+}

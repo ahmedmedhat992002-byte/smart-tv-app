@@ -1,0 +1,21 @@
+{
+  "id": "com.antigravity.tv.iptvplayer",
+  "version": "1.0.0",
+  "vendor": "Antigravity",
+  "type": "web",
+  "main": "index.html",
+  "title": "IPTV Player",
+  "icon": "icon.png",
+  "largeIcon": "icon.png",
+  "bgImage": "",
+  "splashBackground": "#080c14",
+  "resolution": "1920x1080",
+  "requiredVersion": "3.0.0",
+  "disableBackHistoryAPI": true,
+  "handlesRelaunch": true,
+  "supportTouchMode": false,
+  "trustLevel": "default",
+  "accessibility": {
+    "supportsAudioGuidance": false
+  }
+}

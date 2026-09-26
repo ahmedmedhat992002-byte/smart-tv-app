@@ -1,0 +1,12 @@
+{
+	"appId": "com.antigravity.iptvplayer",
+	"appName": "IPTV Premium Player",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https",
+		"cleartext": true
+	},
+	"android": {
+		"allowMixedContent": true
+	}
+}
